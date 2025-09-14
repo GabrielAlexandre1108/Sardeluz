@@ -47,9 +47,7 @@ header > div{
 
     cursor: pointer;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    position: relative;
 }
 
 #linha1, #linha2, #linha3{
@@ -58,15 +56,27 @@ header > div{
 
     border-radius: 1px;
 
+    position: absolute;
+
+    transition: transform .2s linear, top .2s linear, opacity .2s linear;
+
     background-color: var(--cor2);
+}
+
+#linha1{
+    top: 0%;
 }
 
 #linha2{
     opacity: 75%;
+
+    top: 50%;
 }
 
 #linha3{
     opacity: 65%;
+
+    top: 100%;
 }
 
 li{
