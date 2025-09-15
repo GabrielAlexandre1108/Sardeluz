@@ -4,7 +4,7 @@ function mostrar_nav(){
     var lin2 = document.getElementById("linha2") 
     var lin3 = document.getElementById("linha3") 
 
-    if (nav.style.opacity == "0"){
+    if (nav.style.opacity == "0" || nav.style.opacity == ""){
         nav.style.transition = "transform .5s linear, opacity .4s linear"
         nav.style.opacity = "100%"
         nav.style.transform = "translateX(0%)"
