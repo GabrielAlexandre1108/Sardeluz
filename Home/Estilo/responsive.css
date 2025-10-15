@@ -132,7 +132,7 @@
 
 /* Mobile / Android telas medias e grandes */
 
-@media (min-width: 321px) and (max-width: 425px) {
+@media (min-width: 321px) and (max-width: 480px) {
 
     header{
         background: url("../Imagens/BackgroudHero_android.png") center no-repeat border-box scroll; 
