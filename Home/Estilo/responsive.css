@@ -1,7 +1,5 @@
 /* Mobile / Android telas pequenas */
 
-@media (max-width: 320px){
-
     header{
         background: url("../Imagens/BackgroudHero_android.png") center no-repeat border-box scroll; 
         background-size: cover;
@@ -128,223 +126,31 @@
         font-size: 1.2rem;
     }
 
-}
-
 /* Mobile / Android telas medias e grandes */
 
-@media (min-width: 321px) and (max-width: 480px) {
-
-    header{
-        background: url("../Imagens/BackgroudHero_android.png") center no-repeat border-box scroll; 
-        background-size: cover;
-        overflow: hidden;
-    }
-
-    nav{
-        height: 10dvh;
-
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    #logo{
-        width: 56px;
-        height: 52px;
-
-        margin-left: 4vw;
-    }
-
-    #logo > img {
-        width: 100%;
-        height: 100%;
-    }
-
-    #menuburguer{
-        margin-right: 4vw;
-    }
-
-    #nav{
-        background-color: rgba(0, 0, 0, 0.9);
-        backdrop-filter: blur(6px);
-        opacity: 0%;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;  
-
-        position: absolute;
-        top: 100%;
-        right: 0%;
-        transform: translateX(105%);
-
-        width: 50vw;
-        height: 90dvh;
-    }
-
-    #nav > ul{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
-        width: 80%;
-        height: 40%;
-        margin: 10% 0 0 10%;
-    }
-
+@media (min-width: 321px) {
     #nav > ul > li{
-        font-size: 1.6rem;
+        font-size: 1.8rem;
     }
 
     #nav > a{
-        width: 105%;
-        height: 3.2rem;
-        transform: translateX(-5%);
-
-        margin-bottom: 35%;
-        padding-top: 0.8rem;
-
-        text-align: center;
         font-size: 1.6rem;
-
-        background-image: linear-gradient(to right, rgb(224, 122, 63), rgb(233, 140, 86));
-        border-radius: 7px 0 0 7px;
-    }
-
-    section > .titulo{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 2.5dvh;
-
-        height: 50dvh;
     }
 
     h1{
-        width: 95%;
-
         font-size: 3.2rem;
-        text-align: center;
     }
 
     h2{
-        width: 95%;
-
         font-size: 1.6rem;
-        text-align: center;
-    }
-
-    section > #heroCTA{
-        height: 40dvh;
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 2dvh;
     }
 
     #heroCTA :first-child{
-        padding: 10px 0px;
-
-        width: 60vw;
-
         font-size: 1.6rem;
-        text-align: center;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        border-radius: 5px;
     }
 
     #heroCTA :last-child{
         font-size: 1.4rem;
     }
 
-}
-
-@media (min-width: 769px) and (max-width: 1175px) {
-
-/* Desktop padrão */
-
-@media (min-width: 769px) and (max-width: 1400px) {
-
-    header{
-        background: url("../Imagens/BackgroudHero_desktop.png") center no-repeat border-box scroll; 
-        background-size: cover;
-    }
-
-    #menuburguer{
-        display: none;
-    }
-
-    nav{
-        width: 100vw;
-        height: 12dvh;
-
-        display: flex;
-        align-items: center;
-
-        background-color: darkgray;
-    }
-
-    #logo{
-        width: 92px;
-        height: 85px;
-
-        margin: 0px 25px;
-    }
-
-    #logo > img {
-        width: 100%;
-        height: 100%;
-    }
-
-    #nav{
-        width: 100%;
-
-        display: flex;
-        justify-content: space-between;
-
-        margin: 0px 25px 0px 2vw;
-    }
-
-    #nav > ul{
-        display: flex;
-    }
-
-    #nav > ul > li{
-        font-size: 2.8rem;
-        text-align: center;
-
-        padding: 0px 1vw;
-        position: relative;
-
-        background: lightgray;
-    }
-
-    #nav > ul > li:nth-child(-n+5)::after{
-        content: "";
-        display: block;
-        width: 1px;
-        height: 70%;
-
-        position: absolute;
-        top: 15%;
-        right: 0px;
-
-        background-color: black;
-    }
-
-    #nav > a{
-        font-size: 2.8rem;
-        text-align: center;
-    }
-
-    section{
-        width: 100vw;
-        height: 88dvh;
-
-        background-color: lightgray;
-    }
-}
 }
