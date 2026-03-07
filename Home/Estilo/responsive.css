@@ -2,6 +2,10 @@
 
 /* Mobile / Android telas pequenas */
 
+main{
+  display: none;
+}
+
 header {
   background: url("../Imagens/BackgroudHero_android.png") center no-repeat
     border-box scroll;
@@ -162,95 +166,99 @@ section > #heroCTA {
 }
 
 /* iPads e tablets Android */
+/* Codigo temporario para definir manutenção a versão Desktop */
 
 @media (min-width: 768px) {
   header {
     display: none;
   }
 
-  * {
-    background-color: #fff;
+  main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    height: 100dvh;
+    width: 100vw;
   }
-
-  #manutencao {
-    overflow: hidden;
-
-    transition: background-color .5s linear ;
-
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
+  
+  #bgManutencao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
     width: 450px;
     height: 300px;
-
+    
     background-color: transparent;
     box-shadow: 1px 2.5px 9px #00000050;
     
-    border: 1px black solid;
+    border: 1px solid black;
     border-radius: 15px;
-}
-
-
-#manutencao > #BlurText {
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-
-    width: 300px;
-
-    background-color: transparent;
-
-    color: white;
-    text-shadow: 1px 1px 3px black;
-    text-align: center;
-    font-family: "Montserrat", sans-serif;
-    font-size: 2rem;
-}
-
-#manutencao:hover{
-    background-color: #00000090;
-    backdrop-filter: blur(20px);
-
-    border: none;
   }
-
-#manutencao:hover > #BlurText {
-    transition: .3s linear;
-    
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-
-#noBlurText {
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -75%);
+  
+  #noBlurText {
+    width: 300px;
 
     color: #6864F7;
     font-size: 2rem;
     font-weight: 750;
     font-family: "Montserrat", sans-serif;
+    text-align: center;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75);
-}
-
+  }
+  
   img {
-
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -60%);
+    margin-top: 5%;
 
     height: 200px ;
     width: 200px;
   }
+
+  #manutencao{
+    position: absolute;
+    overflow: hidden;
+
+    transition: background-color .4s linear;
+
+    width: 450px;
+    height: 300px;
+
+    background-color: transparent;
+    border-radius: 15px;
+  }
+  
+  #manutencao:hover{
+    background-color: #00000090;
+    backdrop-filter: blur(20px);
+  }
+  
+  #manutencao > #BlurText {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    transition: .4s linear;
+    
+    width: 300px;
+    
+    background-color: transparent;
+    
+    color: white;
+    text-shadow: 1px 1px 3px black;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;
+  }
+  
+  #manutencao:hover > #BlurText {
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 /* Notebooks e telas médias */
-/* Codigo temporario para definir manutenção a versão Desktop */
 
 /* @media (min-width: 1024px) {
   
