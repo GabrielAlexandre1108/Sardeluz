@@ -10,7 +10,7 @@
 
 /* font-family: "Montserrat", sans-serif; */
 
-:root{
+:root {
     --cor1: #1F4B3A;
     --cor2: #E9D8C3;
     --cor3: #E07A3F;
@@ -18,29 +18,29 @@
     --cor5: #333333;
 }
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-html{
+html {
     font-size: 62.5%;
 }
 
-header{
+header {
     width: 100vw;
     height: 100dvh;
 }
 
-header > div{
+header>div {
     width: 100vw;
     height: 100dvh;
 
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.6));
 }
 
-#menuburguer{
+#menuburguer {
     width: 27px;
     height: 22px;
     padding: 2px;
@@ -50,7 +50,9 @@ header > div{
     position: relative;
 }
 
-#linha1, #linha2, #linha3{
+#linha1,
+#linha2,
+#linha3 {
     width: 100%;
     height: 2px;
 
@@ -63,62 +65,64 @@ header > div{
     background-color: var(--cor2);
 }
 
-#linha1{
+#linha1 {
     top: 0%;
 }
 
-#linha2{
+#linha2 {
     opacity: 75%;
 
     top: 50%;
 }
 
-#linha3{
+#linha3 {
     opacity: 65%;
 
     top: 100%;
 }
 
-li{
+li {
     list-style: none;
 }
 
-li > a{
+li>a {
     color: var(--cor2);
 }
 
-h1, h2{
-    font-family: "Playfair" , serif;
+h1,
+h2 {
+    font-family: "Playfair", serif;
     color: var(--cor3);
 }
 
-span{
+span {
     color: var(--cor2);
 }
 
-a{
+a {
     text-decoration: none;
-    font-family: "Inter" , sans-serif ;
+    font-family: "Inter", sans-serif;
 }
 
-#nav > a{
+#nav>a {
     color: var(--cor5);
 }
 
-#heroCTA :first-child, #nav > a{
+#heroCTA :first-child,
+#nav>a {
     font-family: "Montserrat", sans-serif;
-    font-weight: 550px;
+    font-weight: 550;
     text-transform: uppercase;
 }
 
-#heroCTA :first-child{
-    
+#heroCTA :first-child {
+
 
     background-color: var(--cor4);
     color: var(--cor2);
 }
 
-#heroCTA :last-child{
+#heroCTA :last-child {
     color: #E9D8C360;
-    
+
 }

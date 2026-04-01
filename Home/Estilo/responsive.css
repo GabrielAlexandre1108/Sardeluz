@@ -1,14 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 /* Mobile / Android telas pequenas */
 
-main{
+main {
   display: none;
 }
 
 header {
-  background: url("../Imagens/BackgroudHero_android.png") center no-repeat
-    border-box scroll;
+  background: url("../Imagens/BackgroudHero_android.png") center no-repeat border-box scroll;
   background-size: cover;
   overflow: hidden;
 }
@@ -29,7 +28,7 @@ nav {
   margin-left: 4vw;
 }
 
-#logo > img {
+#logo>img {
   width: 100%;
   height: 100%;
 }
@@ -56,7 +55,7 @@ nav {
   height: 90dvh;
 }
 
-#nav > ul {
+#nav>ul {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -66,11 +65,11 @@ nav {
   margin: 10% 0 0 10%;
 }
 
-#nav > ul > li {
+#nav>ul>li {
   font-size: 1.6rem;
 }
 
-#nav > a {
+#nav>a {
   width: 105%;
   height: 3.2rem;
   transform: translateX(-5%);
@@ -81,15 +80,13 @@ nav {
   text-align: center;
   font-size: 1.4rem;
 
-  background-image: linear-gradient(
-    to right,
-    rgb(224, 122, 63),
-    rgb(233, 140, 86)
-  );
+  background-image: linear-gradient(to right,
+      rgb(224, 122, 63),
+      rgb(233, 140, 86));
   border-radius: 7px 0 0 7px;
 }
 
-section > .titulo {
+section>.titulo {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -113,8 +110,10 @@ h2 {
   text-align: center;
 }
 
-section > #heroCTA {
+section>#heroCTA {
+  width: max-content;
   height: 40dvh;
+  margin: auto;
 
   display: flex;
   flex-direction: column;
@@ -123,9 +122,9 @@ section > #heroCTA {
 }
 
 #heroCTA :first-child {
-  padding: 10px 0px;
+  padding: 10px 20px;
 
-  width: 60vw;
+  width: auto;
 
   font-size: 1.4rem;
   text-align: center;
@@ -140,11 +139,11 @@ section > #heroCTA {
 /* Mobile / Android telas medias e grandes */
 
 @media (min-width: 321px) {
-  #nav > ul > li {
+  #nav>ul>li {
     font-size: 1.8rem;
   }
 
-  #nav > a {
+  #nav>a {
     font-size: 1.6rem;
   }
 
@@ -166,108 +165,176 @@ section > #heroCTA {
 }
 
 /* iPads e tablets Android */
-/* Codigo temporario para definir manutenção a versão Desktop */
 
-@media (min-width: 768px) {
+@media (min-width: 475px) {
+  #nav>ul>li {
+    font-size: 2.8rem;
+  }
+
+  #nav>a {
+    font-size: 2.6rem;
+    height: 4.2rem;
+  }
+
+  h1 {
+    font-size: 4.2rem;
+    width: 80%;
+  }
+
+  h2 {
+    font-size: 2.6rem;
+    width: 80%;
+  }
+
+  #heroCTA :first-child {
+    padding: 15px 30px;
+
+    width: auto;
+
+    font-size: 2.6rem;
+    ;
+    border-radius: 10px;
+  }
+
+  #heroCTA :last-child {
+    font-size: 2.4em;
+  }
+}
+
+/* Notebooks */
+
+@media (min-width: 768px) {}
+
+/* Telas médias */
+
+@media (min-width: 1024px) {}
+
+/* Monitores grandes */
+
+@media (min-width: 1440px) {
   header {
+    background: url("../Imagens/BackgroudHero_desktop.png") center no-repeat border-box scroll;
+    background-size: cover;
+  }
+
+  header>nav {
+    flex-direction: row;
+  }
+
+  nav>#logo {
+    width: 5vw;
+    margin: 1vw;
+  }
+
+  #logo>img {
+    width: 56px;
+    height: 52px;
+  }
+
+  nav>#menuburguer {
     display: none;
   }
 
-  main{
+  nav>#nav {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
-    
-    height: 100dvh;
-    width: 100vw;
+    justify-content: space-around;
+
+    opacity: 100%;
+    top: 0%;
+    transform: translateX(0%);
+
+    width: 95vw;
+    height: 100%;
+
+    background-color: transparent;
+    backdrop-filter: blur(0);
+  }
+
+  #nav>ul {
+    flex-direction: row;
+    width: 50%;
+
+    margin: 0px;
+    padding: 0px;
+
+
+    height: auto;
+  }
+
+  ul>li {
+    padding: 10px;
+
+    height: auto;
+  }
+
+  ul>li:hover {
+    opacity: 60%;
+  }
+
+  ul>li::after {
+    content: "";
+    display: block;
+
+    height: 2px;
+    width: 0%;
+
+    background-color: #E9D8C3;
+    opacity: 60%;
+
+    transition: width .2s linear;
+  }
+
+  ul>li:hover::after {
+    width: 100%;
+  }
+
+  #nav>a {
+    margin: 0px;
+    padding: 10px 0px;
+
+    transform: translateX(0);
+
+    width: 20%;
+    height: auto;
+
+    border-radius: 10px;
+  }
+
+  #nav>a:hover {
+    opacity: 60%;
+    font-size: 2.5rem;
+  }
+  h1 {
+    font-size: 6rem;
+    width: 80%;
+  }
+
+  h2 {
+    font-size: 3rem;
+    width: 80%;
   }
   
-  #bgManutencao {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-    width: 450px;
-    height: 300px;
-    
-    background-color: transparent;
-    box-shadow: 1px 2.5px 9px #00000050;
-    
-    border: 1px solid black;
+  #heroCTA :first-child {
+    padding: 3rem 40px;
+    width: auto;
+
     border-radius: 15px;
-  }
-  
-  #noBlurText {
-    width: 300px;
 
-    color: #6864F7;
-    font-size: 2rem;
-    font-weight: 750;
-    font-family: "Montserrat", sans-serif;
-    text-align: center;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75);
-  }
-  
-  img {
-    margin-top: 5%;
-
-    height: 200px ;
-    width: 200px;
+    font-size: 3rem;
   }
 
-  #manutencao{
-    position: absolute;
-    overflow: hidden;
-
-    transition: background-color .4s linear;
-
-    width: 450px;
-    height: 300px;
-
-    background-color: transparent;
-    border-radius: 15px;
-  }
-  
-  #manutencao:hover{
-    background-color: #00000090;
-    backdrop-filter: blur(20px);
-  }
-  
-  #manutencao > #BlurText {
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-
-    transition: .4s linear;
+  #heroCTA :first-child:hover{
+    padding: 3.1rem;
+    margin-bottom: 0.2rem;
     
-    width: 300px;
-    
-    background-color: transparent;
-    
-    color: white;
-    text-shadow: 1px 1px 3px black;
-    text-align: center;
-    font-family: "Montserrat", sans-serif;
-    font-size: 2rem;
+    font-size: 2.8rem;
+
+    opacity: 90%;
   }
-  
-  #manutencao:hover > #BlurText {
-    top: 50%;
-    transform: translate(-50%, -50%);
+
+  #heroCTA :last-child {
+    font-size: 2.6em;
   }
 }
-
-/* Notebooks e telas médias */
-
-/* @media (min-width: 1024px) {
-  
-}
-
- Monitores grandes
-
- @media (min-width: 1440px) {
-  * {
-    background-color: red;
-  }
-} */
